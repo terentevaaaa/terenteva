@@ -157,8 +157,40 @@
 
 Таким образом, были выполнены все необходимые шаги для настройки и запуска Docker, Docker Compose и Grafana на Oracle Linux.
 
+Захожу в графану с данными admin admin
 
+![image](https://github.com/user-attachments/assets/d3fd4a30-0d42-42e5-8b72-4ae373122914)
 
+Попадаю на главную страницу графаны
 
+![image](https://github.com/user-attachments/assets/c0e83f02-c2f5-4339-89eb-6596b56a6d29)
+
+Создаю дэшборд
+
+![image](https://github.com/user-attachments/assets/8afe15e1-4500-42d2-809d-b256362e77ce)
+
+Добавляю визуализацию
+
+![image](https://github.com/user-attachments/assets/b35d14a2-bc4d-4de0-9102-dcab47e7ecba)
+
+Добавляю источник данных и выбираю прометиус
+
+![image](https://github.com/user-attachments/assets/2c4ac338-f208-47b7-9bb4-8b18ab98669d)
+
+Настраиваю аутентификацию и подключение
+
+![image](https://github.com/user-attachments/assets/53694ed8-d712-496a-b5b0-3e3dd2778f07)
+
+Нажимаю сохранить и проверить
+
+![image](https://github.com/user-attachments/assets/84ce107b-c10e-46c7-a2a7-1087c779bdfc)
+
+Импортирую 1860 дэшборд
+
+![image](https://github.com/user-attachments/assets/4f0f7119-8692-4be7-a50a-530ae8166f75)
+
+Готовая графана
+
+![image](https://github.com/user-attachments/assets/2b17744d-3ce5-42d4-a80a-56adfbc842a1)
 
 
