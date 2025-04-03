@@ -1,4 +1,4 @@
-
+![image](https://github.com/user-attachments/assets/68cf7cbb-87de-4e51-bae1-222a9b68eca4)
 Начала я с установки Oracle Linux с гостевыми дополнениями на виртуальную машину. Образ операционной системы был загружен с официального сайта, выбранная версия — LTS (Long-Term Support), чтобы обеспечить стабильность работы и минимизировать необходимость частых обновлений. Виртуальная машина была настроена с использованием 2 процессоров и 2 ГБ оперативной памяти, что достаточно для выполнения базовых задач.
 
 Первым шагом была установка утилиты Wget, которая позволяет загружать файлы непосредственно из терминала. Это удобно для быстрого скачивания данных без необходимости использования графического интерфейса. Установка была выполнена с использованием команды: Также линукс предупреждает меня о использовании sudo
@@ -193,4 +193,56 @@
 
 ![image](https://github.com/user-attachments/assets/2b17744d-3ce5-42d4-a80a-56adfbc842a1)
 
+
+VICTORIA
+
+Запускаю docker compose вместе с викторией метрикс
+
+![image](https://github.com/user-attachments/assets/c6181b2b-37ac-4cfa-b5c7-10ace035cf61)
+
+Создаю новое соединение
+
+![image](https://github.com/user-attachments/assets/5898e568-7f0c-4d99-87e7-cac4226deb5a)
+
+Выбираю прометиус, вставляю url виктории OILCOINT_metric1
+
+![image](https://github.com/user-attachments/assets/30858e8b-b452-46bb-8357-fe06b33b38f0)
+
+Выбираю режим код, и вставляю параметр 
+
+![image](https://github.com/user-attachments/assets/1e27f89d-47a2-4397-8c7e-8077929cb9aa)
+
+Дальше ввожу в терминал:
+
+Первая команда:
+
+`echo -e "# TYPE OILCOINT_metric1 gauge\nOILCOINT_metric1 0" | curl --data-binary @- http://localhost:8428/api/v1/import/prometheus`
+
+Эта команда выполняет:
+
+Создаёт метрику OILCOINT_metric1 типа gauge со значением 25
+
+Отправляет эти данные на локальный сервер Prometheus через POST-запрос, используя API для импорта метрик в формате Prometheus.
+
+Вторая команда:
+
+`curl -G 'http://localhost:8428/api/v1/query' --data-urlencode 'query=OILCOINT_metric1'`
+
+Эта команда:
+
+Выполняет GET-запрос к API Prometheus
+
+Запрашивает текущее значение метрики OILCOINT_metric1
+
+Использует параметр URL-кодировки для безопасной передачи запроса
+
+![image](https://github.com/user-attachments/assets/7ac201ed-b94f-41f6-9835-a098db2e3dae)
+
+Создаю Dashboard с визуализацией виктории, вставляя параметр:
+
+![image](https://github.com/user-attachments/assets/148c46f6-a9ee-4f92-b035-24e888b34040)
+
+Также в самой виктории
+
+![image](https://github.com/user-attachments/assets/2f774f37-0414-453a-aae4-7565ec92a104)
 
